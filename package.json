@@ -9,9 +9,21 @@
   "author": "Eliaz Bobadilla <eliaz.bobadilladev@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "build:docs": "typedoc --out docs src",
+    "dev:docs": "concurrently 'typedoc --watch --out docs src' 'live-server docs'",
+    "fmt": "prettier --write 'src/**/*.ts'",
+    "lint": "eslint 'src/**/*.ts' && prettier --check 'src/**/*.ts'"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.1",
+    "@typescript-eslint/parser": "^5.12.1",
+    "eslint": "^8.10.0",
+    "eslint-plugin-tsdoc": "^0.2.14",
+    "eslint-plugin-unicorn": "^41.0.0",
+    "prettier": "^2.5.1",
+    "typedoc": "^0.22.12",
     "typescript": "^4.5.5"
   },
   "dependencies": {

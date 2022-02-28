@@ -3,7 +3,6 @@ import FormData from "form-data";
 
 import { nanoid } from "nanoid";
 
-
 import type {
   AccountDetails,
   DeleteFileResponse,
@@ -11,8 +10,6 @@ import type {
   UploadFileResponse,
   UploadOptions,
 } from "./types";
-
-
 
 export enum ENDPOINTS {
   BASE_URL = "https://api.tixte.com/v1",

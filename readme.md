@@ -11,18 +11,19 @@ npm i @ultirequiem/tixte # yarn add @ultirequiem/tixte
 Usage
 
 ```ts
-export const tixteClient = new TixteClient(process.env.TIXTE_API_KEY!, {
+const tixteClient = new TixteClient(process.env.TIXTE_API_KEY, {
   defaultURL: "sergif.likes.cash",
 });
 
-export const upload = async (event) => {
-  const {
-    data: { url, direct_url },
-  } = await tixteClient.uploadFile(Buffer.from(event.body!, "base64"), {
-    extension: "gif",
-  });
+const upload = async (event) => {
+  const { data } = await tixteClient.uploadFile(
+    Buffer.from(event.body!, "base64"),
+    {
+      extension: "gif",
+    }
+  );
 
-  return { url, direct_url };
+  return data;
 };
 ```
 
@@ -30,9 +31,11 @@ export const upload = async (event) => {
 
 ## Using `@ultirequiem/tixte`
 
-Are you using this package in your codebase? Add it here!
+Are you using this package? Add it here!
 
-- [Sergif](https://sergif.ultirequiem.com) - Uses this packages on the Netlify Functions
+- [Sergif](https://sergif.ultirequiem.com) - Netlify Functions - **Netlify x Hashnode 2022 Hackathon**
+
+- [Piolafood](https://github.com/UltiRequiem/piolafood) - Next.js Endpoints - **First Buildergroop Hackathon**
 
 ## Licence
 

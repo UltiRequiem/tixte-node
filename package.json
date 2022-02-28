@@ -12,7 +12,7 @@
     "build": "tsc",
     "dev": "tsc --watch",
     "build:docs": "typedoc --out docs src",
-    "dev:docs": "concurrently 'typedoc --watch --out docs src' 'live-server docs'",
+    "dev:docs": "typedoc --watch --out docs src",
     "fmt": "prettier --write 'src/**/*.ts'",
     "lint": "eslint 'src/**/*.ts' && prettier --check 'src/**/*.ts'"
   },
